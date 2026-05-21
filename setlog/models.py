@@ -2,11 +2,6 @@ from dataclasses import dataclass, field
 from typing import List, Optional
 
 @dataclass
-class User:
-    username: str
-    weight: Optional[float] = None
-
-@dataclass
 class Gym:
     name: str
     location: Optional[str] = None
@@ -49,3 +44,13 @@ class SplitDay:
 class Split:
     name: str
     days: List[SplitDay] = field(default_factory = list)
+
+@dataclass
+class WeightEntry:
+    date: str
+    weight: float
+
+@dataclass
+class User:
+    username: str
+    weight_log: List[WeightEntry] = field(default_factory = list)
