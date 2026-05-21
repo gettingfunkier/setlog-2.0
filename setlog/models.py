@@ -33,6 +33,7 @@ class Session:
     partner: Optional[str]
     split_day: Optional[str] = None
     exercises: List[Exercise] = field(default_factory = list)
+    feel: Optional[str] = None
     notes: Optional[str] = None
 
 @dataclass
