@@ -16,10 +16,11 @@ setlog is a personal fitness analytics tool that parses Obsidian workout logs to
 ### Data Model
 
 - **Gym**: name, location, notes on equipment
+- **Machine**: name, gym, notes on weight
+- **Set**: weight, reps, flags
+- **Exercise**: name, equipment type, muscle groups
 - **Session**: date, gym, type, list of exercises, notes
 - **Split**: name, list of days, each day mapped to exercises
-- **Exercise**: name, equipment type, muscle groups
-- **Set**: weight, reps, flags
 
 ### Directory
 
@@ -37,3 +38,4 @@ setlog-2.0/
 │   ├── models.py
 │   └── parser.py
 └── tests/
+```
